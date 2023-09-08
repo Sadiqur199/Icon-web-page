@@ -46,9 +46,9 @@ const IconFilter = () => {
   });
 
   const iconDisplayModes = {
-    cheatsheet: 'grid grid-cols-4 gap-4',
-    compact: 'flex flex-col',
-    roomy: 'grid grid-cols-5 gap-4',
+    cheatsheet: 'grid grid-cols-2 md:grid-cols-8 gap-4',
+    compact: 'grid grid-cols-1 md:grid-cols-5 gap-4',
+    roomy: 'grid grid-cols-2 md:grid-cols-4 gap-4',
   };
 
   return (
@@ -136,7 +136,7 @@ const IconFilter = () => {
           onSubcategoryChange={handleSubcategoryChange}
         />
 
-        <div className={`w-full grid grid-cols-2 md:grid-cols-4 gap-4 ${iconDisplayModes[displayMode]}`}>
+        <div className={`w-full  ${iconDisplayModes[displayMode]}`}>
           {sortedIcons.map((icon, index) => (
             <div
               key={index}
