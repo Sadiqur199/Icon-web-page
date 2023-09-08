@@ -5,17 +5,27 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import IconList from './Component/pages/IconList/IconList';
+import Login from './Component/Login/Login';
+import SignUp from './Component/SingUp/SingUp';
+import Main from './Layout/Main';
 import IconFilter from './Component/IconFilter';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<IconList></IconList>,
+    element:<Main></Main>,
     children:[
       {
-        path:'/icons',
+        path:'/',
         element:<IconFilter></IconFilter>
+      },
+      {
+        path:'/login',
+        element:<Login></Login>
+      },
+      {
+        path:'/singup',
+        element:<SignUp></SignUp>
       }
     ]
   },

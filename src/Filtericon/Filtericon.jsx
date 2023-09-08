@@ -1,4 +1,3 @@
-// Filtericon.js (Continued)
 import React, { useState } from 'react';
 import icons from '../Utill/data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -23,6 +22,16 @@ const Filtericon = () => {
     }
   });
 
+  // Count the number of icons in each category
+  const categoryCounts = {};
+  icons.forEach((icon) => {
+    if (categoryCounts[icon.category]) {
+      categoryCounts[icon.category]++;
+    } else {
+      categoryCounts[icon.category] = 1;
+    }
+  });
+
   return (
     <div>
       <div className="mb-4">
@@ -39,7 +48,7 @@ const Filtericon = () => {
             >
               {categoryOptions.map((option) => (
                 <option key={option} value={option}>
-                  {option.charAt(0).toUpperCase() + option.slice(1)}
+                  {option.charAt(0).toUpperCase() + option.slice(1)} ({categoryCounts[option] || 0})
                 </option>
               ))}
             </select>

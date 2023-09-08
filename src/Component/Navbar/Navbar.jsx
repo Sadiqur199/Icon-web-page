@@ -1,17 +1,24 @@
 // Navbar.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
+    navigate('/login');
+  };
+
   return (
     <nav className="bg-[#FFFFFF] py-4 text-gray-500">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center"> {/* Start section */}
+        <div className="flex items-center">
           <Link to="/" className="text-3xl font-bold mr-4">
-            {/* FontAwesome icon */}
             <i className="fas fa-icons text-3xl"></i>
           </Link>
-          <Link to="/icons" className="text-gray-500 font-bold text-xl">
+          <Link to="/" className="text-gray-500 font-bold text-xl">
             Icons
           </Link>
         </div>
@@ -19,7 +26,7 @@ const Navbar = () => {
           <Link to="/" className="text-gray-500  mr-10">
             Home
           </Link>
-          <Link to="/icons" className="text-gray-500  mr-10">
+          <Link to="/" className="text-gray-500  mr-10">
             Icons
           </Link>
           <a href="#docs" className="text-gray-500  mr-10">
@@ -32,10 +39,16 @@ const Navbar = () => {
             Support
           </a>
         </div>
-        <div className="hidden md:flex"> {/* Display on medium-sized screens */}
-          <a href="#signin" className="text-gray-500  md:mr-5">
-            Sign In
-          </a>
+        <div className="hidden md:flex">
+          {isLoggedIn ? (
+            <Link onClick={handleLogout} to="/" className="text-gray-500  md:mr-5">
+              Sign Out
+            </Link>
+          ) : (
+            <Link to="/login" className="text-gray-500  md:mr-5">
+              Sign In
+            </Link>
+          )}
         </div>
       </div>
     </nav>
