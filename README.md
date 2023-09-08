@@ -3,8 +3,8 @@
 
 - [Live Link](https://web-page-icon.netlify.app/) 
 ###### Feature
-1.login and registration system
-2.icon filtering 
-3.letter wise icon identify
-4.category wise icon divided
-5.header footer added
+1.login and registration system<br>
+2.icon filtering <br>
+3.letter wise icon identify<br>
+4.category wise icon divided<br>
+5.header footer added<br>
