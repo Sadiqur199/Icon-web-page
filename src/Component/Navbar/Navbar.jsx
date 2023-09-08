@@ -1,4 +1,3 @@
-// Navbar.js
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -13,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#FFFFFF] py-4 text-gray-500">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex flex-wrap justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="text-3xl font-bold mr-4">
             <i className="fas fa-icons text-3xl"></i>
@@ -22,7 +21,7 @@ const Navbar = () => {
             Icons
           </Link>
         </div>
-        <div className="hidden md:flex justify-center flex-1">
+        <div className="md:flex justify-center flex-1  block">
           <Link to="/" className="text-gray-500  mr-10">
             Home
           </Link>
@@ -39,7 +38,7 @@ const Navbar = () => {
             Support
           </a>
         </div>
-        <div className="hidden md:flex">
+        <div className=" flex">
           {isLoggedIn ? (
             <Link onClick={handleLogout} to="/" className="text-gray-500  md:mr-5">
               Sign Out

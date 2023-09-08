@@ -8,7 +8,10 @@ const Filtericon = () => {
 
   const categoryOptions = ['all', 'brand', 'free', 'classic', 'sharp'];
 
-  const filteredIcons = categoryFilter === 'all' ? icons : icons.filter((icon) => icon.category === categoryFilter);
+  const filteredIcons =
+    categoryFilter === 'all'
+      ? icons
+      : icons.filter((icon) => icon.category === categoryFilter);
 
   const handleCategoryChange = (category) => {
     setCategoryFilter(category);
@@ -22,7 +25,6 @@ const Filtericon = () => {
     }
   });
 
-  // Count the number of icons in each category
   const categoryCounts = {};
   icons.forEach((icon) => {
     if (categoryCounts[icon.category]) {
@@ -70,14 +72,13 @@ const Filtericon = () => {
         </div>
       </div>
 
-      {/* Display Filtered and Sorted Icons */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="">
         {sortedIcons.map((icon, index) => (
           <div
             key={index}
-            className="text-center p-4 rounded-lg transition-all duration-300 hover:bg-orange-400 hover:text-white"
+            className=" text-center p-4 rounded-lg transition-all duration-300 hover:bg-orange-400 hover:text-white"
           >
-            <FontAwesomeIcon icon={icon.icon} size="6x" className="mb-2" />
+            <FontAwesomeIcon icon={icon.icon} size="2x" className="mb-2" />
             <p className="mt-2">{icon.name}</p>
           </div>
         ))}
