@@ -22,7 +22,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="md:flex justify-center flex-1  block">
-          <Link to="/" className="text-gray-500  mr-10">
+          <Link to="/" className="text-gray-500 md:ml-0 ml-2  mr-10">
             Home
           </Link>
           <Link to="/" className="text-gray-500  mr-10">
@@ -38,7 +38,7 @@ const Navbar = () => {
             Support
           </a>
         </div>
-        <div className=" flex">
+        <div className=" flex md:ml-2 ml-0">
           {isLoggedIn ? (
             <Link onClick={handleLogout} to="/" className="text-gray-500  md:mr-5">
               Sign Out
