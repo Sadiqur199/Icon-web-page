@@ -1,8 +1,10 @@
-# React + Vite
+# Icon-Web-Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Live Link](https://web-page-icon.netlify.app/) 
+###### Feature
+1.login and registration system
+2.icon filtering 
+3.letter wise icon identify
+4.category wise icon divided
+5.header footer added
