@@ -1,14 +1,9 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { FaFontAwesomeFlag } from 'react-icons/fa';
+import { Link} from 'react-router-dom';
 
 const Navbar = () => {
-  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-  const navigate = useNavigate();
 
-  const handleLogout = () => {
-    localStorage.removeItem('isLoggedIn');
-    navigate('/login');
-  };
 
   return (
     <nav className="bg-[#FFFFFF] py-4 text-gray-500">
@@ -18,7 +13,7 @@ const Navbar = () => {
             <i className="fas fa-icons text-3xl"></i>
           </Link>
           <Link to="/" className="text-gray-500 font-bold text-xl">
-            Icons
+            <FaFontAwesomeFlag color='#183153'></FaFontAwesomeFlag>
           </Link>
         </div>
         <div className="md:flex justify-center flex-1  block">
@@ -28,26 +23,15 @@ const Navbar = () => {
           <Link to="/" className="text-gray-500  mr-10">
             Icons
           </Link>
-          <a href="#docs" className="text-gray-500  mr-10">
+          <a href="/" className="text-gray-500  mr-10">
             Docs
           </a>
-          <a href="#plans" className="text-gray-500  mr-10">
+          <a href="/" className="text-gray-500  mr-10">
             Plans
           </a>
           <a href="#support" className="text-gray-500  mr-3">
             Support
           </a>
-        </div>
-        <div className=" flex md:ml-2 ml-0">
-          {isLoggedIn ? (
-            <Link onClick={handleLogout} to="/" className="text-gray-500  md:mr-5">
-              Sign Out
-            </Link>
-          ) : (
-            <Link to="/login" className="text-gray-500  md:mr-5">
-              Sign In
-            </Link>
-          )}
         </div>
       </div>
     </nav>
