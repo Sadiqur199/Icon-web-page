@@ -51,7 +51,6 @@ const IconFilter = () => {
      onSelectStyle = {handleStyleClick}
      ></Category>
 
-      {/* Icon display */}
       <div className="flex flex-col md:flex-row bg-[#F0F1F3] py-10 px-5 w-full">
         <Sidebar
              onSelectCategory={handleCategoryClick}

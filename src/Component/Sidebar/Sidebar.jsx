@@ -48,7 +48,6 @@ const Sidebar = ({ onSelectStyle, onSelectFeatured, onSelectCategory }) => {
     const updatedStyles = toggleFilter(selectedFilters.styles, style);
     setSelectedFilters({ ...selectedFilters, styles: updatedStyles });
 
-    // Map the "Regular" style to "classic" and "Solid" style to "sharp"
     let selectedCategory = "";
     if (updatedStyles.includes("Regular")) {
       selectedCategory = "classic";
