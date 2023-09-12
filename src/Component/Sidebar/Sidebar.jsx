@@ -114,7 +114,7 @@ const Sidebar = ({ onSelectStyle, onSelectFeatured, onSelectCategory }) => {
               key={i}
               onClick={() => handleFeaturedSelect(feature)}
             >
-              <FaCircle size={4} className="inline" /> {feature} {" "} (
+              <FaCircle  size={4} className="inline" /> {feature} {" "} (
               {subFeaturedCount[feature]})
             </li>
           ))}

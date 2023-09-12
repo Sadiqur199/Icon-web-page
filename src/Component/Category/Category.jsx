@@ -23,36 +23,44 @@ const Category = ({ onSelectCategory, onSelectStyle }) => {
           className={`mr-8 ${
             selectedCategory === "classic" ? "text-blue-500" : ""
           }`}
-          onClick={() => handleCategorySelect("classic", "Regular")}
+          onClick={() => handleCategorySelect("classic", selectedStyle)}
         >
-          <FaIcons size={30}></FaIcons>
+          <FaIcons className={`text-[#183153]${
+            selectedCategory === "classic" ? "text-blue-500" : ""
+          } ` } size={30}></FaIcons>
           <h1>Classic</h1>
         </div>
         <div
           className={`mr-8 ${
             selectedCategory === "sharp" ? "text-blue-500" : ""
           }`}
-          onClick={() => handleCategorySelect("sharp", "Solid")}
+          onClick={() => handleCategorySelect("sharp", selectedStyle)}
         >
-          <FaIcons size={30}></FaIcons>
+          <FaIcons className={`text-[#183153]${
+            selectedCategory === "sharp" ? "text-blue-500" : ""
+          } ` } size={30}></FaIcons>
           <h1>Sharp</h1>
         </div>
         <div
           className={`mr-8 ${
             selectedCategory === "brand" ? "text-blue-500" : ""
           }`}
-          onClick={() => handleCategorySelect("brand", "Light")}
+          onClick={() => handleCategorySelect("brand", selectedStyle)}
         >
-          <BsFlag size={30}></BsFlag>
+          <BsFlag className={`text-[#183153]${
+            selectedCategory === "brand" ? "text-blue-500" : ""
+          } ` } size={30}></BsFlag>
           <h1>Brands</h1>
         </div>
         <div
           className={`${
             selectedCategory === "free" ? "text-blue-500" : ""
           }`}
-          onClick={() => handleCategorySelect("free", "Thin")}
+          onClick={() => handleCategorySelect("free", selectedStyle)}
         >
-          <FaBolt size={30}></FaBolt>
+          <FaBolt className={`text-[#183153]${
+            selectedCategory === "free" ? "text-blue-500" : ""
+          } ` } size={30}></FaBolt>
           <h1>Free</h1>
         </div>
       </div>
